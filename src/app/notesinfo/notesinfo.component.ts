@@ -26,8 +26,8 @@ export class NotesinfoComponent implements OnInit {
       console.log(this);
       this.getnotes.fetchnotes(this.uid).subscribe(
         response => {
-            console.log(response.json());
-            this.notesdata = response.json();
+            console.log(response);
+            this.notesdata = response;
             this.getlocalNotes.saveNotesInfo(this.notesdata);
             this.router.navigate(['viewnotes']);
         },

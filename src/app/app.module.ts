@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -16,6 +16,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { NotesinfoComponent } from './notesinfo/notesinfo.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ViewnotesComponent } from './viewnotes/viewnotes.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 const routes: Routes = [
@@ -38,7 +40,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    HttpModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
@@ -46,7 +48,8 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatSnackBarModule
   ],
   exports: [ RouterModule ],
   providers: [],
