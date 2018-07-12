@@ -14,9 +14,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeaderComponent } from './header/header.component';
 import {MatIconModule} from '@angular/material/icon';
 import { NotesinfoComponent } from './notesinfo/notesinfo.component';
+import { AddnotesDialogComponent } from './notesinfo/notesinfo.component'
 import { RouterModule, Routes } from '@angular/router';
 import { ViewnotesComponent } from './viewnotes/viewnotes.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -34,7 +36,8 @@ const routes: Routes = [
     LoginComponent,
     HeaderComponent,
     NotesinfoComponent,
-    ViewnotesComponent
+    ViewnotesComponent,
+    AddnotesDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -49,10 +52,12 @@ const routes: Routes = [
     MatInputModule,
     MatToolbarModule,
     MatIconModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   exports: [ RouterModule ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddnotesDialogComponent]
 })
 export class AppModule { }

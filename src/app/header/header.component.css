@@ -1,3 +1,7 @@
-.example-icon{
+mat-icon{
+    float: right ;
+}
+.mat-icons{
+    width: 300px;
     float: right;
 }

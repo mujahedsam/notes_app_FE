@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>{{data.message}}</h1>
+<div mat-dialog-content>
+  <p>Give an Id to your Notes</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.uid" placeholder="uid">
+  </mat-form-field>
+  <p>Give a Name to your Notes</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.name" placeholder="name">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
